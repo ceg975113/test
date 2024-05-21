@@ -1,0 +1,185 @@
+.register-container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+
+  .box__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: self-start;
+    padding: 0 86px;
+    padding-top: 32px;
+  }
+
+  .link-box {
+    display: flex;
+    align-items: center;
+
+    > svg {
+      cursor: pointer;
+    }
+  }
+
+  .box__content {
+    width: 1680px;
+    height: auto;
+    background: rgba(255, 255, 255, 0.44);
+
+    border-radius: 32px;
+    backdrop-filter: blur(10px);
+    margin: 0 auto;
+    margin-top: 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 40px 24px 40px;
+    .form-box__header {
+      position: relative;
+      text-align: center;
+      width: 100%;
+      .title-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .title__text {
+          height: 44px;
+          font-size: 32px;
+          font-family: PingFangSC-Semibold, PingFang SC;
+          font-weight: 600;
+          color: rgba(34, 34, 34, 0.85);
+          line-height: 44px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        .title__mark {
+          margin-top: 4px;
+          display: block;
+          width: 24px;
+          height: 4px;
+          background: #69daa9;
+          border-radius: 2px;
+        }
+      }
+      .login-selector {
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: flex;
+        align-items: center;
+        height: 40px;
+        .paratext {
+          height: 33px;
+          font-size: 24px;
+          font-family: PingFangSC-Regular, PingFang SC;
+          font-weight: 400;
+          color: rgba(34, 34, 34, 0.85);
+          line-height: 33px;
+        }
+        .icon-next {
+          margin-left: 20px;
+        }
+      }
+    }
+    .form-box__content {
+      margin-top: 32px;
+      margin-bottom: 26px;
+      width: 948px;
+
+      .self-form-item {
+        :global {
+          .ant-form-item-label {
+            height: 32px;
+
+            > label {
+              height: 32px;
+              font-size: 20px;
+              font-family: PingFangSC-Semibold, PingFang SC;
+              font-weight: 600;
+              color: rgba(34, 34, 34, 0.85);
+              line-height: 32px;
+            }
+            .ant-form-item-required::before {
+              display: none;
+            }
+            .ant-form-item-required::after {
+              content: '（必填）';
+              font-size: 10px;
+            }
+          }
+          .ant-form-item-control-input-content {
+            margin-top: 12px;
+            > input {
+              width: 100%;
+              height: 60px;
+              background: #e6f1ed;
+              border-radius: 16px;
+              border: 1px solid #ffffff;
+              backdrop-filter: blur(4px);
+            }
+            > span {
+              background: #e6f1ed;
+              border-radius: 16px;
+              border: 1px solid #ffffff;
+              width: 100%;
+              height: 60px;
+              > input {
+                background: #e6f1ed;
+              }
+            }
+          }
+        }
+      }
+      .self-input {
+        font-size: 20px !important;
+      }
+      .self-reg-button {
+        width: 462px;
+        height: 60px;
+        background: linear-gradient(135deg, #91efb7 0%, #68d9a8 100%);
+        border-radius: 16px;
+        border: 2px solid #ffffff;
+      }
+      .box__operation {
+        text-align: center;
+      }
+      .self-verify-button {
+        width: 160px;
+        height: 60px;
+        background: #ffaa24;
+        border-radius: 16px;
+        border: 1px solid #ffffff;
+      }
+    }
+    .form-box__footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .agreement {
+        height: 22px;
+        font-size: 16px;
+        font-family: PingFangSC-Regular, PingFang SC;
+        font-weight: 400;
+        color: rgba(0, 0, 0, 0.45);
+        line-height: 22px;
+
+        &-link {
+          color: #00a5ff;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  :global .ant-statistic {
+    line-height: 0;
+    .ant-statistic-content {
+      color: #ccc;
+    }
+  }
+  .form-item-required-label::after {
+    content: '(必填)';
+    margin-left: 8px;
+    font-size: 14px;
+  }
+}
